@@ -1,12 +1,12 @@
 AddCSLuaFile()
 
-ENT.PrintName = "Armor Kit"
+ENT.PrintName = "Armor Kit" -- Set the name of the entity.
+ENT.funModel = "models/items/battery.mdl" -- Sets the model of the entity.
+ENT.funSound = "items/battery_pickup.wav" -- Sets the sound of the entity on use.
+ENT.funAmount = 15 -- Sets the value given to the player upon use.
+ENT.funMode = true -- Enable to give the user armor, disable to give the user health.
 
-ENT.funModel = "models/items/battery.mdl"
-ENT.funSound = "items/battery_pickup.wav"
-ENT.funAmount = 15
-ENT.useMode = true
-
+-- General Information for Entity
 ENT.Base = "funtities_base"
 ENT.Category = "Fun Entities"
 ENT.Purpose = "Consume for health"

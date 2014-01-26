@@ -25,7 +25,7 @@ function ENT:Initialize()
 end
 
 function ENT:Use( activator )
-	if self.useMode then
+	if self.funMode then
 		activator:SetArmor( activator:Armor() + self.funAmount )
 	else
 		activator:SetHealth( activator:Health() + self.funAmount )
