@@ -24,11 +24,15 @@ function ENT:Initialize()
 	end
 end
 
-function ENT:Use( activator )
+function ENT:Use( activator, ply )
 	if self.funMode then
 		activator:SetArmor( activator:Armor() + self.funAmount )
 	else
 		activator:SetHealth( activator:Health() + self.funAmount )
+	end
+	
+	if self.funChat then
+		ply:ChatPrint( self.funChatMsg )
 	end
 	
 	activator:EmitSound( self.funSound, 50, 100 )
